@@ -5,7 +5,7 @@ import {Fragment} from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import {HomeScreen} from './src/homescreen';  
+import {Mapa} from './src/mapa';  
 import {SplashScreen} from './src/splashscreen';  
 import {CarrilBici} from './src/carrilbici';  
 
@@ -70,13 +70,13 @@ function DrawerNav() {
                     
             >
             <Drawer.Screen
-              name="Carril Bici"
-              options={{ drawerLabel: 'Mapbox' }}
+              name="Inicio"
+              options={{ drawerLabel: 'Inicio' }}
               component={CarrilBici} />
             <Drawer.Screen
               name="Mapa"
               options={{ drawerLabel: 'Mapa' }}
-              component={HomeScreen} />
+              component={Mapa} />
 
         </Drawer.Navigator>
   )}

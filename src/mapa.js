@@ -4,23 +4,21 @@ import React from 'react';
 import { StyleSheet, View, Image, TouchableHighlight } from 'react-native';
 import MapboxGL from '@react-native-mapbox-gl/maps';
 import 'react-native-gesture-handler';
-import logo from '../assets/habitant.png'; 
-import sabermas from '../assets/saber_mas.png'; 
-import { Linking } from 'react-native';
 import json from '../assets/parking_bicis.json'; 
 import json2 from '../assets/carrilbici.json'; 
 import {
   PermissionsAndroid
 } from 'react-native';
+//import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 
 
 
 MapboxGL.setAccessToken('pk.eyJ1IjoiZGFyZW5hcyIsImEiOiJjazE5M3R2OHAwMXA2M2VudDY1MDhwbGZwIn0.O8jPIUaaENpa2YRuAta_wA');
 
+//const Tab = createBottomTabNavigator(); 
 
-
-for(let i = 0; i < json.features.length; i++){
+{ /* LOGOfor(let i = 0; i < json.features.length; i++){
 
   json.features[i].properties.localizacion
 
@@ -30,46 +28,32 @@ for(let i = 0; i < json.features.length; i++){
   console.log(json.features[i].properties.localizacion)
 
 }
+*/}
 
-
-export class HomeScreen extends React.Component {
+export class Mapa extends React.Component {
 
   
 
   constructor (props) {
     super(props);
   
-    this.state = {
-      info: "informacion"
-    };
+    
   }
 
  
   render() {
    
     return (
-     
+
+        
 
       <View style={styles.page}>
 
          <View style={styles.container}>
+  
+        
        
-                
-            { /* LOGO
-            
-            <View style={{alignItems:'center', justifyContent:'center',flex:0.3}}>  
-            
-            <Image 
-                
-                source={logo}
-                style={{aspectRatio:4.5, width:wp('100%'), height:hp('8%'), marginTop:hp('0%')}}
-                
-                >    
-            </Image>  
-
-            </View> 
-*/}
-          <MapboxGL.MapView 
+              <MapboxGL.MapView 
                styleURL={MapboxGL.StyleURL.Street}
                style={styles.map}
                zoomEnabled={true} 
@@ -100,6 +84,35 @@ export class HomeScreen extends React.Component {
                      animated={true}
                      />
                     
+
+                    { /*json carril bici2 */}
+                    <MapboxGL.ShapeSource 
+                     
+                     id="carrilbici2"
+                     
+                     shape={json2}
+                     
+                     > 
+                     <MapboxGL.LineLayer
+                          id="line2"
+                          style={styles.line2}
+                        />
+                    </MapboxGL.ShapeSource>
+
+
+                    { /*json carril bici */}
+                    <MapboxGL.ShapeSource 
+                     
+                     id="carrilbici"
+                     
+                     shape={json2}
+                     
+                     > 
+                     <MapboxGL.LineLayer
+                          id="line"
+                          style={styles.line}
+                        />
+                    </MapboxGL.ShapeSource>
                     { /*json estaciones bici */}
                     <MapboxGL.ShapeSource 
                      
@@ -128,43 +141,13 @@ export class HomeScreen extends React.Component {
 
                     </MapboxGL.ShapeSource>
 
-                    { /*json carril bici */}
-                    <MapboxGL.ShapeSource 
-                     
-                     id="carrilbici"
-                     
-                     shape={json2}
-                     
-                     > 
-                     <MapboxGL.LineLayer
-                          id="line"
-                          style={styles.line}
-                        />
-                  
-                                            
+                    
 
-                    </MapboxGL.ShapeSource>
+                  
 
                 </View>
 
           </MapboxGL.MapView>
-
-          { /* LOGO
-            
-            <View style={{alignItems:'center', justifyContent:'center', flex:0.1, backgroundColor:'#00FBCE'}}>  
-            <TouchableHighlight 
-            onPress={() => Linking.openURL('https://habitant.es/')}>
-                <Image 
-                    
-                    source={sabermas}
-                    style={{aspectRatio:2.5, width:wp('100%'), height:hp('15%'), marginBottom:hp('2%')}}
-                                
-                    >    
-                </Image>  
-            </TouchableHighlight>
-            </View> 
-       
-*/}
         </View>
 
       </View>
@@ -217,8 +200,13 @@ const styles = StyleSheet.create({
     flex: 1
   },
   line: {
-    color:'green',
-    backgroundColor:'white'
+    lineColor:'green',
+    lineWidth:2
+  },
+
+  line2: {
+    lineColor:'white',
+    lineWidth:8
   },
   clusteredPoints: {
     circlePitchAlignment: 'map',

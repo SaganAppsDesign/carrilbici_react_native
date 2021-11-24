@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Text, View, Dimensions, ScrollView, Image, ImageBackground, TouchableOpacity, StyleSheet, ToastAndroid} from 'react-native';
 import ImageOverlay from "react-native-image-overlay";
-import fondo from '../assets/carrilbici.png'; 
+import logo from '../assets/logo.png'; 
 
 
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
@@ -11,11 +11,7 @@ export class CarrilBici extends React.Component {
 
   constructor(props){
     super(props)
-    
- 
-
- 
-  
+     
   
   }
 
@@ -29,7 +25,7 @@ export class CarrilBici extends React.Component {
 
 
     <ImageOverlay 
-          source={fondo}
+          //source={fondo}
           height={hp('100%')}  
           overlayAlpha={0}                 
           > 
@@ -39,11 +35,17 @@ export class CarrilBici extends React.Component {
                           
                 <View style={{alignItems: 'center', flexDirection:'column',flex:9, width:wp('100%'), height:hp('100%')}}>
 
-                      
+                    <Image 
+                        
+                        source={logo}
+                        style={{aspectRatio:2.5, width:wp('100%'), height:hp('15%'), marginBottom:hp('2%'), marginTop:hp('2%')}}
+                                    
+                        >    
+                    </Image> 
                     
-         </View>
+                </View>
        
-       </View>
+           </View>
 
 
     </ImageOverlay> 
