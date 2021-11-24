@@ -39,9 +39,10 @@ export class SplashScreen extends React.Component {
           > 
                               
           <View style={{alignItem:'center', justifyContent:'center', width:wp('100%'), height:hp('100%'), flex:1, flexDirection:'column'}}>  
-                                                        
-                          
-                <View style={{alignItems: 'center', flexDirection:'column',flex:9, width:wp('100%'), height:hp('100%')}}>
+                         <Text>Carril Bici Cádiz</Text>
+
+                         
+          <View style={{alignItems: 'center', flexDirection:'column',flex:9, width:wp('100%'), height:hp('100%')}}>
 
                       
                     

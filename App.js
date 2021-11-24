@@ -6,8 +6,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import {Mapa} from './src/mapa';  
+import {MapaSat} from './src/mapaSatelite'; 
+import { MapaDark } from './src/mapaDark';
 import {SplashScreen} from './src/splashscreen';  
 import {CarrilBici} from './src/carrilbici';  
+
 
 
 const Stack = createStackNavigator();
@@ -74,9 +77,17 @@ function DrawerNav() {
               options={{ drawerLabel: 'Inicio' }}
               component={CarrilBici} />
             <Drawer.Screen
-              name="Mapa"
-              options={{ drawerLabel: 'Mapa' }}
+              name="Mapa Streets"
+              options={{ drawerLabel: 'Mapa Street' }}
               component={Mapa} />
+            <Drawer.Screen
+              name="Mapa Satélite"
+              options={{ drawerLabel: 'Mapa Satélite' }}
+              component={MapaSat} />
+            <Drawer.Screen
+            name="Mapa Dark"
+            options={{ drawerLabel: 'Mapa Dark' }}
+            component={MapaDark} />
 
         </Drawer.Navigator>
   )}

@@ -15,7 +15,7 @@ import { CarrilBici } from './carrilbici';
 
 
 
-MapboxGL.setAccessToken('pk.eyJ1IjoiZGFyZW5hcyIsImEiOiJjazE5M3R2OHAwMXA2M2VudDY1MDhwbGZwIn0.O8jPIUaaENpa2YRuAta_wA');
+MapboxGL.setAccessToken('pk.eyJ1IjoiZGFyZW5hcyIsImEiOiJjazFydHh0M2IwMXJkM25uMzg4NGZ2bXA1In0.IGaE15lgmHS6y3HFCI8oww');
 
 //const Tab = createBottomTabNavigator(); 
 
@@ -37,7 +37,7 @@ const Tab = createBottomTabNavigator()
 
 
 
-export class Mapa extends React.Component {
+export class MapaDark extends React.Component {
 
   
 
@@ -62,7 +62,7 @@ export class Mapa extends React.Component {
         
        
               <MapboxGL.MapView 
-               styleURL={MapboxGL.StyleURL.Street}
+               styleURL={MapboxGL.StyleURL.Dark}
                style={styles.map}
                zoomEnabled={true} 
                scrollEnabled={true}
@@ -214,7 +214,7 @@ const styles = StyleSheet.create({
 
   line2: {
     lineColor:'white',
-    lineWidth:8
+    lineWidth:5
   },
   clusteredPoints: {
     circlePitchAlignment: 'map',

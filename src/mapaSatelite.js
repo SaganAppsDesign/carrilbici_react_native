@@ -15,7 +15,7 @@ import { CarrilBici } from './carrilbici';
 
 
 
-MapboxGL.setAccessToken('pk.eyJ1IjoiZGFyZW5hcyIsImEiOiJjazE5M3R2OHAwMXA2M2VudDY1MDhwbGZwIn0.O8jPIUaaENpa2YRuAta_wA');
+MapboxGL.setAccessToken('pk.eyJ1IjoiZGFyZW5hcyIsImEiOiJja3dkcmxtMGYwbnpjMnVuMWNvMncydGI5In0.68RholEPFtbgAC4e3Rf2pA');
 
 //const Tab = createBottomTabNavigator(); 
 
@@ -37,7 +37,7 @@ const Tab = createBottomTabNavigator()
 
 
 
-export class Mapa extends React.Component {
+export class MapaSat extends React.Component {
 
   
 
@@ -62,7 +62,7 @@ export class Mapa extends React.Component {
         
        
               <MapboxGL.MapView 
-               styleURL={MapboxGL.StyleURL.Street}
+               styleURL={MapboxGL.StyleURL.SatelliteStreet}
                style={styles.map}
                zoomEnabled={true} 
                scrollEnabled={true}
