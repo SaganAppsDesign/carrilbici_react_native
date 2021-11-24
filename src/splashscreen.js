@@ -9,13 +9,7 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 
 export class SplashScreen extends React.Component {
 
-        constructor (props) {
-          super(props);
-        
-          this.state = {
-            info: "informacion"
-          };
-        }
+     
 
 
  render() {
