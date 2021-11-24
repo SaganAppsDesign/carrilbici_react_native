@@ -7,6 +7,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import {HomeScreen} from './src/homescreen';  
 import {SplashScreen} from './src/splashscreen';  
+import {CarrilBici} from './src/carrilbici';  
 
 
 const Stack = createStackNavigator();
@@ -20,9 +21,7 @@ export class MainScreen extends React.Component {
  
   render(){ 
 
-    
-
-  
+     
   return (
     <Stack.Navigator
     
@@ -46,14 +45,41 @@ export class MainScreen extends React.Component {
         }
       }}>
 
-
+      
       <Stack.Screen options={{headerShown: false}}  name="SplashScreen" component={SplashScreen}/>
-      <Stack.Screen options={{headerShown: false}} name="Habitant" component={HomeScreen}  />
-
-
+      <Stack.Screen options={{headerShown: false}}  name="DrawerNav" component={DrawerNav}/>
+     
+      
     </Stack.Navigator>
+
+
   )};
 }
+
+function DrawerNav() {
+  
+  return (
+        <Drawer.Navigator
+          
+          screenOptions={{
+          drawerStyle: {
+            backgroundColor: 'white',
+            width: 200,
+          },
+        }}
+                    
+            >
+            <Drawer.Screen
+              name="Carril Bici"
+              options={{ drawerLabel: 'Mapbox' }}
+              component={CarrilBici} />
+            <Drawer.Screen
+              name="Mapa"
+              options={{ drawerLabel: 'Mapa' }}
+              component={HomeScreen} />
+
+        </Drawer.Navigator>
+  )}
 
 
 export default function App()  {
@@ -63,26 +89,9 @@ export default function App()  {
 
  
       <NavigationContainer>
-         <Drawer.Navigator
-           
-            screenOptions={{
-            drawerStyle: {
-              backgroundColor: 'white',
-              width: 200,
-            },
-          }}
-            
-            
-            >
-            <Drawer.Screen
-              name="Mapbox"
-              options={{ drawerLabel: 'Mapbox' }}
-              component={SplashScreen} />
-            <Drawer.Screen
-              name="Mapa"
-              options={{ drawerLabel: 'Mapa' }}
-              component={HomeScreen} />
-           </Drawer.Navigator>
+        
+         <MainScreen />
+
       </NavigationContainer>
 
     

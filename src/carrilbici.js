@@ -7,18 +7,14 @@ import fondo from '../assets/carrilbici.png';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 
-export class SplashScreen extends React.Component {
+export class CarrilBici extends React.Component {
 
   constructor(props){
     super(props)
     
  
 
-      setTimeout(()=>{
-    
-        this.props.navigation.replace('DrawerNav')
-  
-      }, 3000)
+ 
   
   
   }

@@ -100,6 +100,7 @@ export class HomeScreen extends React.Component {
                      animated={true}
                      />
                     
+                    { /*json estaciones bici */}
                     <MapboxGL.ShapeSource 
                      
                      id="parkingbici"
@@ -127,7 +128,7 @@ export class HomeScreen extends React.Component {
 
                     </MapboxGL.ShapeSource>
 
-
+                    { /*json carril bici */}
                     <MapboxGL.ShapeSource 
                      
                      id="carrilbici"
