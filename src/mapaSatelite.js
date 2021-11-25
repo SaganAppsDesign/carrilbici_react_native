@@ -15,7 +15,7 @@ import { CarrilBici } from './carrilbici';
 
 
 
-MapboxGL.setAccessToken('pk.eyJ1IjoiZGFyZW5hcyIsImEiOiJja3dkcmxtMGYwbnpjMnVuMWNvMncydGI5In0.68RholEPFtbgAC4e3Rf2pA');
+MapboxGL.setAccessToken('pk.eyJ1IjoiZGFyZW5hcyIsImEiOiJjanc4eWZhbTkwamgyNGFxcmVrYWw3ZGdrIn0.RptuMSKr1erkm2XaiXKVvA');
 
 //const Tab = createBottomTabNavigator(); 
 

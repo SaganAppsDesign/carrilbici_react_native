@@ -1,5 +1,5 @@
 
-import React from 'react';
+import * as React from 'react';
 import 'react-native-gesture-handler';
 import {Fragment} from 'react';
 import { NavigationContainer } from '@react-navigation/native';
@@ -9,7 +9,7 @@ import {Mapa} from './src/mapa';
 import {MapaSat} from './src/mapaSatelite'; 
 import { MapaDark } from './src/mapaDark';
 import {SplashScreen} from './src/splashscreen';  
-import {CarrilBici} from './src/carrilbici';  
+import CarrilBici from './src/carrilbici';  
 
 
 
@@ -76,19 +76,22 @@ function DrawerNav() {
               name="Inicio"
               options={{ drawerLabel: 'Inicio' }}
               component={CarrilBici} />
+
             <Drawer.Screen
               name="Mapa Streets"
               options={{ drawerLabel: 'Mapa Street' }}
               component={Mapa} />
+
+{ /*
             <Drawer.Screen
               name="Mapa Satélite"
               options={{ drawerLabel: 'Mapa Satélite' }}
               component={MapaSat} />
             <Drawer.Screen
-            name="Mapa Dark"
-            options={{ drawerLabel: 'Mapa Dark' }}
-            component={MapaDark} />
-
+              name="Mapa Dark"
+              options={{ drawerLabel: 'Mapa Dark' }}
+              component={MapaDark} />
+*/}
         </Drawer.Navigator>
   )}
 

@@ -1,25 +1,20 @@
-import * as React from 'react';
+import React, {useState, useEffect} from 'react';
 import {Text, View, Dimensions, ScrollView, Image, ImageBackground, TouchableOpacity, StyleSheet, ToastAndroid} from 'react-native';
 import ImageOverlay from "react-native-image-overlay";
 import logo from '../assets/logo.png'; 
-
-
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
+const CarrilBici = () => {
 
-export class CarrilBici extends React.Component {
+    const [activo, setActivo] = useState(false)  
 
-  constructor(props){
-    super(props)
-     
-  
-  }
+    useEffect(() =>{
 
-
-
- render() {
-
+        setTimeout(()=>{
+            setActivo(true)
+        }, 3000)
     
+      }, [])
 
   return (
 
@@ -42,6 +37,17 @@ export class CarrilBici extends React.Component {
                                     
                         >    
                     </Image> 
+
+                    <Text style={{ fontSize:hp('3%'), fontWeight:'bold', color: 'gray', textAlign:'center', fontFamily:'courier'}}>
+                        {activo ?
+                                <Text>Estoy activo </Text>
+                        :
+                                <Text>Estoy inactivo </Text>
+                    
+                            }
+                
+                    </Text>
+                    
                     
                 </View>
        
@@ -51,12 +57,9 @@ export class CarrilBici extends React.Component {
     </ImageOverlay> 
 
   )
-}
 
+} 
 
-
-}
-
-
+export default CarrilBici;
 
 
