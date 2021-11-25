@@ -4,13 +4,13 @@ import React from 'react';
 import { StyleSheet, View, Image, TouchableHighlight } from 'react-native';
 import MapboxGL from '@react-native-mapbox-gl/maps';
 import 'react-native-gesture-handler';
-import json from '../assets/parking_bicis.json'; 
-import json2 from '../assets/carrilbici.json'; 
+import json from './parking_bicis.json'; 
+import json2 from './carrilbici.json'; 
 import {
   PermissionsAndroid
 } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { CarrilBici } from './carrilbici';
+
 
 
 

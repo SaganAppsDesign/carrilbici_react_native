@@ -1,9 +1,9 @@
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import * as React from 'react';
 import CarrilBici from './carrilbici';  
-import {Mapa} from './mapa';  
-import {MapaSat} from './mapaSatelite'; 
-import { MapaDark } from './mapaDark';
+import {Mapa} from './mapas/mapa';  
+import {MapaSat} from './mapas/mapaSatelite'; 
+import { MapaDark } from './mapas/mapaDark';
 
 
 const Drawer = createDrawerNavigator();
