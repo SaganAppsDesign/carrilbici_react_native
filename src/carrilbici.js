@@ -47,9 +47,11 @@ const CarrilBici = () => {
                             }
                 
                     </Text>
-                    
-                    
+                                       
                 </View>
+
+
+                
        
            </View>
 

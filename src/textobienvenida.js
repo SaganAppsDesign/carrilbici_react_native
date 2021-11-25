@@ -4,8 +4,7 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 
 
 
-
-const TextoBienvenida = (props) => {
+const TextoBienvenida = (propiedades) => {
 
     const [activo, setActivo] = useState(false)  
 
@@ -28,7 +27,7 @@ const TextoBienvenida = (props) => {
         </Text>
 
          <Text style={{ fontSize:hp('3%'), fontWeight:'bold', color: 'gray', textAlign:'center', fontFamily:'courier', paddingTop:hp('3%')}}>
-                {activo ? props.children : null}
+                {activo ? propiedades.children : null}
 
         </Text>
         <View>

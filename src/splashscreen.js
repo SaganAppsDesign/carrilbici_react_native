@@ -12,8 +12,6 @@ export class SplashScreen extends React.Component {
   constructor(props){
     super(props)
     
- 
-
       setTimeout(()=>{
     
         this.props.navigation.replace('DrawerNav')
@@ -22,7 +20,6 @@ export class SplashScreen extends React.Component {
   
   
   }
-
 
 
  render() {
