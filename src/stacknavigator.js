@@ -11,14 +11,14 @@ function StackNav() {
   
     return (
 
-        <Stack.Navigator
+        <Stack.Navigator initialRouteName="SplashScreen"
             
             screenOptions={{
             //headerLeft: null,
             headerStyle: {
             backgroundColor: 'orange',
             },
-            headerTintColor: '#fff',
+            headerTintColor: '#000',
             
             headerTitleStyle: {
             fontWeight: 'bold'
@@ -27,6 +27,7 @@ function StackNav() {
             topBar: {
             
             hideBackButtonTitle: true,
+            backgroundColor: 'orange',
             backButton: {
                 showTitle:false
             }

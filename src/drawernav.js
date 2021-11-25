@@ -12,35 +12,34 @@ function DrawerNav() {
   
     return (
           <Drawer.Navigator
-            
+            //openByDefault={true}
+            initialRouteName='Inicio' 
+                  
             screenOptions={{
+                        
             drawerStyle: {
               backgroundColor: 'white',
               width: 200,
             },
+
+            headerTintColor:'#ffffff',
+
+            headerStyle:{
+              backgroundColor: 'black',
+              }
           }}
                       
               >
               <Drawer.Screen
                 name="Inicio"
-                options={{ headerShown: true  }}
+                options={{ headerShown: false  }}
                 component={CarrilBici} />
   
               <Drawer.Screen
                 name="Mapa"
-                options={{ headerShown: true  }}
+                options={{ headerShown: false  }}
                 component={Mapa} />
-  
-  { /*
-              <Drawer.Screen
-                name="Mapa Satélite"
-                options={{ drawerLabel: 'Mapa Satélite' }}
-                component={MapaSat} />
-              <Drawer.Screen
-                name="Mapa Dark"
-                options={{ drawerLabel: 'Mapa Dark' }}
-                component={MapaDark} />
-  */}
+
           </Drawer.Navigator>
     )}
 

@@ -1,13 +1,14 @@
 import React, {useState, useEffect} from 'react';
-import {Text, View, Dimensions, ScrollView, Image, ImageBackground, TouchableOpacity, StyleSheet, ToastAndroid} from 'react-native';
-import ImageOverlay from "react-native-image-overlay";
+import {Text, View, ScrollView, Image, ImageBackground} from 'react-native';
 import logo from '../assets/logo.png'; 
 import foto1 from '../assets/carrilbici2.jpg'; 
 import foto2 from '../assets/puentepepa.jpg'; 
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 
-const CarrilBici = () => {
+const CarrilBici = (propiedades) => {
+
+    //console.log(propiedades)
 
     const [activo, setActivo] = useState(false)  
 
@@ -39,14 +40,14 @@ const CarrilBici = () => {
                                     
                         >    
 
-                    <Image 
-                        
-                        source={logo}
-                        style={{aspectRatio:2.5, width:wp('50%'), height:hp('5%'), marginBottom:hp('1%'), marginTop:hp('2%'), marginLeft:wp('75%') , alignItems:'flex-start'}}
+                                <Image 
                                     
-                        >    
-                    </Image> 
-                                <Text style={{opacity:0.7, backgroundColor:'gray' , fontSize:hp('3%'), fontWeight:'bold', color: 'black', textAlign:'center', fontFamily:'courier', padding:hp('1%'), marginTop:hp('0%')}}>
+                                    source={logo}
+                                    style={{aspectRatio:2.5,  width:wp('50%'), height:hp('5%'), marginBottom:hp('1%'), marginTop:hp('2%'), marginLeft:wp('75%') , alignItems:'flex-start'}}
+                                                
+                                    >    
+                                </Image> 
+                                <Text style={{color:'black',  fontSize:20,  textAlign:'center', padding:hp('1%'), marginTop:hp('2%'),fontWeight: 'bold'}}>
                                 {activo ?
                                         <Text>Bienvenidos a la APP Carril bici Cádiz</Text>
                                 :
