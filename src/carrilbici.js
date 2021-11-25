@@ -28,7 +28,7 @@ const CarrilBici = () => {
           <View style={{alignItem:'center', justifyContent:'center', width:wp('100%'), height:hp('100%'), flex:1, flexDirection:'column'}}>  
                                                         
                           
-                <View style={{alignItems: 'center', flexDirection:'column',flex:9, width:wp('100%'), height:hp('100%')}}>
+                <View style={{textAlign:'center', alignItems: 'center', flexDirection:'column',flex:9, width:wp('100%'), height:hp('100%')}}>
 
                     <Image 
                         
@@ -38,11 +38,11 @@ const CarrilBici = () => {
                         >    
                     </Image> 
 
-                    <Text style={{ fontSize:hp('3%'), fontWeight:'bold', color: 'gray', textAlign:'center', fontFamily:'courier'}}>
+                    <Text style={{ fontSize:hp('3%'), fontWeight:'bold', color: 'gray', textAlign:'center', fontFamily:'courier', padding:hp('2%')}}>
                         {activo ?
-                                <Text>Estoy activo </Text>
+                                <Text>Aquí encontrará toda la información necesaria</Text>
                         :
-                                <Text>Estoy inactivo </Text>
+                                <Text>Bienvenidos a la APP Carril bici Cádiz </Text>
                     
                             }
                 
