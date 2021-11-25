@@ -23,12 +23,12 @@ function DrawerNav() {
               >
               <Drawer.Screen
                 name="Inicio"
-                options={{ drawerLabel: 'Inicio' }}
+                options={{ headerShown: true  }}
                 component={CarrilBici} />
   
               <Drawer.Screen
                 name="Mapa"
-                options={{ drawerLabel: 'Mapa' }}
+                options={{ headerShown: true  }}
                 component={Mapa} />
   
   { /*

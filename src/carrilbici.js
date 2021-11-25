@@ -3,6 +3,7 @@ import {Text, View, Dimensions, ScrollView, Image, ImageBackground, TouchableOpa
 import ImageOverlay from "react-native-image-overlay";
 import logo from '../assets/logo.png'; 
 import foto1 from '../assets/carrilbici2.jpg'; 
+import foto2 from '../assets/puentepepa.jpg'; 
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 
@@ -20,54 +21,59 @@ const CarrilBici = () => {
 
   return (
 
+    <ScrollView style={{width:wp('100%')}}> 
 
-    <ImageOverlay 
-          //source={fondo}
-          height={hp('100%')}  
-          overlayAlpha={0}                 
-          > 
                               
           <View style={{alignItem:'center', justifyContent:'center', width:wp('100%'), height:hp('100%'), flex:1, flexDirection:'column'}}>  
                                                         
-                          
+                
                 <View style={{textAlign:'center', alignItems: 'center', flexDirection:'column',flex:9, width:wp('100%'), height:hp('100%')}}>
+
+                    
+
+                    <ImageBackground 
+                        
+                        source={foto2}
+                        //resizeMode={'stretch'}
+                        style={{width:wp('100%'), height:hp('20%'), marginBottom:hp('0%'), marginTop:hp('0%'), opacity:1}}
+                                    
+                        >    
 
                     <Image 
                         
                         source={logo}
-                        style={{aspectRatio:2.5, width:wp('100%'), height:hp('15%'), marginBottom:hp('2%'), marginTop:hp('2%')}}
+                        style={{aspectRatio:2.5, width:wp('50%'), height:hp('5%'), marginBottom:hp('1%'), marginTop:hp('2%'), marginLeft:wp('75%') , alignItems:'flex-start'}}
                                     
                         >    
                     </Image> 
-
-                    <Text style={{ fontSize:hp('3%'), fontWeight:'bold', color: 'gray', textAlign:'center', fontFamily:'courier', padding:hp('2%')}}>
-                        {activo ?
-                                <Text>Bienvenidos a la APP Carril bici Cádiz</Text>
-                        :
-                                <Text>¿Qué tal ciclista?</Text>
-                    
-                            }
-                
-                    </Text>
+                                <Text style={{opacity:0.7, backgroundColor:'gray' , fontSize:hp('3%'), fontWeight:'bold', color: 'black', textAlign:'center', fontFamily:'courier', padding:hp('1%'), marginTop:hp('0%')}}>
+                                {activo ?
+                                        <Text>Bienvenidos a la APP Carril bici Cádiz</Text>
+                                :
+                                        <Text>¿Qué tal ciclista?</Text>
+                            
+                                    }
+                        
+                                </Text>
+                    </ImageBackground > 
 
                     <Image 
                         
                         source={foto1}
-                        style={{aspectRatio:1.0, width:wp('100%'), height:hp('50%'), marginBottom:hp('2%'), marginTop:hp('2%')}}
+                        resizeMode='contain'
+                        style={{aspectRatio:1.0, width:wp('100%'), height:hp('50%'), marginBottom:hp('0%'), marginTop:hp('5%')}}
                                     
                         >    
                     </Image> 
                                        
                 </View>
-
-
+              
+                
 
        
            </View>
-
-
-    </ImageOverlay> 
-
+ 
+    </ScrollView>
   )
 
 } 

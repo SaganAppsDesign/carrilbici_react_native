@@ -5,7 +5,6 @@ import MapboxGL from '@react-native-mapbox-gl/maps';
 import 'react-native-gesture-handler';
 import json from './parking_bicis.json'; 
 import json2 from './carrilbici.json'; 
-import Botones from './botones';
 
 import {
   PermissionsAndroid
@@ -29,9 +28,6 @@ MapboxGL.setAccessToken('pk.eyJ1IjoiZGFyZW5hcyIsImEiOiJjazE5M3R2OHAwMXA2M2VudDY1
 */}
 
 const Tab = createBottomTabNavigator()
-
-
-
 
 
 export class Mapa extends React.PureComponent {
@@ -78,9 +74,7 @@ export class Mapa extends React.PureComponent {
          
          <View style={styles.container}>
 
-           
-              <Botones/>
-       
+              
        
               <MapboxGL.MapView 
                styleURL={this.state.estilomapa}
@@ -177,10 +171,86 @@ export class Mapa extends React.PureComponent {
                 </View>
 
           </MapboxGL.MapView>
+
+
+           {/*Botones*/}     
+        <View style={{alignItems:'center', flex:0.07,  justifyContent:'center', flexDirection:'row', marginBottom:hp('0%'),marginTop:hp('0%'), backgroundColor:'black'}}>  
+        
+        <View  style={{alignItems:'center', flex:1,  justifyContent:'center', borderColor:'gray', borderWidth: 1, marginTop:hp('0%'), marginBottom:hp('0%')}}>
+            <TouchableOpacity 
+                                                                         
+               onPress={() => satelite()}
+              > 
+                                    
+                  <Text style={{color: '#E53D18',
+                    backgroundColor: 'black',
+                    fontSize: hp('2.5%'),
+                    marginBottom: hp('0.5%'),
+                    fontWeight: 'bold',
+                    padding: hp('0.5%'),
+                    textAlign: 'center',
+                   
+                   
+                     }}>Satelite</Text>
+
+                             
+           </TouchableOpacity> 
+
         </View>
 
-        
-        
+       <View  style={{alignItems:'center', flex:1,  justifyContent:'center',  opacity:1, borderColor:'gray', borderWidth: 1, marginTop:hp('0%'), marginBottom:hp('0%')}}>
+           <TouchableOpacity 
+                                                                        
+                 onPress={() => dark()}
+             > 
+
+                  <Text style={{color: '#E53D18',
+                    backgroundColor: 'black',
+                    fontSize: hp('2.5%'),
+                    marginBottom: hp('0.5%'),
+                    fontWeight: 'bold',
+                    padding: hp('0.5%'),
+                    textAlign: 'center',
+                    
+                   
+                     }}>Dark</Text>
+                                                       
+          </TouchableOpacity> 
+
+         </View>
+
+
+
+         <View  style={{alignItems:'center', flex:1,  justifyContent:'center',  opacity:1,  borderColor:'gray', borderWidth: 1, marginTop:hp('0%'), marginBottom:hp('0%')}}>
+         
+         <TouchableOpacity 
+                                                                        
+              onPress={() => street()}
+             > 
+                                   
+             
+                 <Text style={{color: '#E53D18',
+                    backgroundColor: 'black',
+                    fontSize: hp('2.5%'),
+                    marginBottom: hp('0.5%'),
+                    fontWeight: 'bold',
+                    padding: hp('0.5%'),
+                    textAlign: 'center',
+                   
+                   
+                     }}>Street</Text>
+
+                            
+          </TouchableOpacity> 
+
+         </View>
+             
+
+       </View>
+     
+     
+{/* FIN botones */}     
+        </View>
 
       </View>
     )
