@@ -2,7 +2,7 @@ import * as React from 'react';
 import {Text, View, Dimensions, ScrollView, Image, ImageBackground, TouchableOpacity, StyleSheet, ToastAndroid} from 'react-native';
 import ImageOverlay from "react-native-image-overlay";
 import fondo from '../assets/carrilbici.png'; 
-import Nav from './textobienvenida'
+import TextoBienvenida from './textobienvenida'
 
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
@@ -40,9 +40,9 @@ export class SplashScreen extends React.Component {
                               
           <View style={{alignItem:'center', justifyContent:'center', width:wp('100%'), height:hp('100%'), flex:1, flexDirection:'column', paddingTop:hp('75%')}}>  
                         
-                <Nav>
+                <TextoBienvenida>
                   Una alternativa ecológica...
-                </Nav>
+                </TextoBienvenida>
                          
           <View style={{alignItems: 'center', flexDirection:'column',flex:9, width:wp('100%'), height:hp('100%')}}>
 
