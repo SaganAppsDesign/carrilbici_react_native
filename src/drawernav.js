@@ -2,8 +2,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import * as React from 'react';
 import CarrilBici from './carrilbici';  
 import {Mapa} from './mapas/mapa';  
-import {MapaSat} from './mapas/mapaSatelite'; 
-import { MapaDark } from './mapas/mapaDark';
+
 
 
 const Drawer = createDrawerNavigator();
@@ -28,8 +27,8 @@ function DrawerNav() {
                 component={CarrilBici} />
   
               <Drawer.Screen
-                name="Mapa Streets"
-                options={{ drawerLabel: 'Mapa Street' }}
+                name="Mapa"
+                options={{ drawerLabel: 'Mapa' }}
                 component={Mapa} />
   
   { /*

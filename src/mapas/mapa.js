@@ -1,19 +1,16 @@
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
-//import {Text, View, Dimensions, ScrollView, Image, ImageBackground, TouchableOpacity, StyleSheet, ToastAndroid} from 'react-native';
 import React from 'react';
-import { StyleSheet, View, Image, TouchableHighlight } from 'react-native';
+import { StyleSheet, View, Image, TouchableOpacity, Text } from 'react-native';
 import MapboxGL from '@react-native-mapbox-gl/maps';
 import 'react-native-gesture-handler';
 import json from './parking_bicis.json'; 
 import json2 from './carrilbici.json'; 
+import Botones from './botones';
+
 import {
   PermissionsAndroid
 } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
-
-
-
 
 MapboxGL.setAccessToken('pk.eyJ1IjoiZGFyZW5hcyIsImEiOiJjazE5M3R2OHAwMXA2M2VudDY1MDhwbGZwIn0.O8jPIUaaENpa2YRuAta_wA');
 
@@ -37,32 +34,56 @@ const Tab = createBottomTabNavigator()
 
 
 
-export class Mapa extends React.Component {
+export class Mapa extends React.PureComponent {
 
-  
 
   constructor (props) {
     super(props);
-  
     
   }
 
+  state = {
+    estilomapa: MapboxGL.StyleURL.Street,
+    
+   }
+
  
   render() {
-   
+
+    const satelite = () => (
+
+      this.setState({estilomapa: MapboxGL.StyleURL.SatelliteStreet})
+     
+    )
+
+    const street = () => (
+
+      this.setState({estilomapa: MapboxGL.StyleURL.Street})
+    
+    )
+
+    const dark = () => (
+
+      this.setState({estilomapa: MapboxGL.StyleURL.Dark})
+    
+    )
+    
+
     return (
 
         
 
       <View style={styles.page}>
-    
 
+         
          <View style={styles.container}>
-  
-        
+
+           
+              <Botones/>
+       
        
               <MapboxGL.MapView 
-               styleURL={MapboxGL.StyleURL.Street}
+               styleURL={this.state.estilomapa}
                style={styles.map}
                zoomEnabled={true} 
                scrollEnabled={true}
@@ -73,7 +94,7 @@ export class Mapa extends React.Component {
                onPress={(feature)=>console.log('Coords:', feature.geometry.coordinates)}
                
                >   
-                              
+        
           
                 <MapboxGL.Camera
                     zoomLevel={12}
@@ -157,6 +178,9 @@ export class Mapa extends React.Component {
 
           </MapboxGL.MapView>
         </View>
+
+        
+        
 
       </View>
     )
