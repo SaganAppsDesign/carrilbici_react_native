@@ -12,7 +12,7 @@ const TextoBienvenida = (propiedades) => {
 
         setTimeout(()=>{
             setActivo(true)
-        }, 2000)
+        }, 1000)
     
       }, [])
 
@@ -20,13 +20,13 @@ const TextoBienvenida = (propiedades) => {
     
     return (
     <View>
-        <Text style={{ fontSize:hp('5%'), fontWeight:'bold', color: 'gray', textAlign:'center',  fontFamily:'ComforterBrush-Regular'}}>
+        <Text style={{ fontSize:hp('5%'),  color: 'gray', textAlign:'center',  fontFamily:'Sarpanch-ExtraBold'}}>
 
             Carril bici Cádiz
           
         </Text>
 
-         <Text style={{ fontSize:hp('3%'), fontWeight:'bold', color: 'gray', textAlign:'center', fontFamily:'ComforterBrush-Regular', paddingTop:hp('3%')}}>
+         <Text style={{ fontSize:hp('3%'), color: 'gray', textAlign:'center', fontFamily:'Sarpanch-ExtraBold', paddingTop:hp('3%')}}>
                 {activo ? propiedades.children : null}
 
         </Text>

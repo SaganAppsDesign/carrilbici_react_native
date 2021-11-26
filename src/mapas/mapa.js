@@ -9,7 +9,7 @@ import json2 from './carrilbici.json';
 import {
   PermissionsAndroid
 } from 'react-native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
 
 MapboxGL.setAccessToken('pk.eyJ1IjoiZGFyZW5hcyIsImEiOiJjazE5M3R2OHAwMXA2M2VudDY1MDhwbGZwIn0.O8jPIUaaENpa2YRuAta_wA');
 
@@ -27,7 +27,7 @@ MapboxGL.setAccessToken('pk.eyJ1IjoiZGFyZW5hcyIsImEiOiJjazE5M3R2OHAwMXA2M2VudDY1
 }
 */}
 
-const Tab = createBottomTabNavigator()
+
 
 
 export class Mapa extends React.PureComponent {
