@@ -1,7 +1,7 @@
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import * as React from 'react';
-import CarrilBici from './carrilbici';  
 import {Mapa} from './mapas/mapa';  
+import TabNav from './tabnavigator'
 
 
 
@@ -33,7 +33,7 @@ function DrawerNav() {
               <Drawer.Screen
                 name="Inicio"
                 options={{ headerShown: false  }}
-                component={CarrilBici} />
+                component={TabNav} />
   
               <Drawer.Screen
                 name="Mapa"

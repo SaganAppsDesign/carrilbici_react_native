@@ -1,9 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import {Text, View, ScrollView, Image, ImageBackground} from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+
+import {Mapa} from './mapas/mapa';  
+
 import logo from '../assets/logo.png'; 
 import foto1 from '../assets/carrilbici2.jpg'; 
 import foto2 from '../assets/puentepepa.jpg'; 
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+
 
 
 const CarrilBici = (propiedades) => {
@@ -22,9 +27,11 @@ const CarrilBici = (propiedades) => {
 
   return (
 
+
+    
     <ScrollView style={{width:wp('100%')}}> 
 
-                              
+                                 
           <View style={{alignItem:'center', justifyContent:'center', width:wp('100%'), height:hp('100%'), flex:1, flexDirection:'column'}}>  
                                                         
                 
@@ -47,11 +54,11 @@ const CarrilBici = (propiedades) => {
                                                 
                                     >    
                                 </Image> 
-                                <Text style={{color:'black',  fontSize:20,  textAlign:'center', padding:hp('1%'), marginTop:hp('2%'),fontWeight: 'bold'}}>
+                                <Text style={{color:'black',  fontSize:20,  textAlign:'center', padding:hp('1%'), marginTop:hp('0%'),fontWeight: 'bold'}}>
                                 {activo ?
-                                        <Text>Bienvenidos a la APP Carril bici Cádiz</Text>
+                                        <Text style={{fontFamily:'Sarpanch-Black',   fontSize:30,  textAlign:'center', padding:hp('1%'), marginTop:hp('2%')}}>Carril bici Cádiz</Text >
                                 :
-                                        <Text>¿Qué tal ciclista?</Text>
+                                        <Text style={{fontFamily:'Sarpanch-Black',   fontSize:30,  textAlign:'center', padding:hp('1%'), marginTop:hp('2%')}}>¿Qué tal ciclista?</Text>
                             
                                     }
                         
@@ -75,9 +82,13 @@ const CarrilBici = (propiedades) => {
            </View>
  
     </ScrollView>
+
+    
   )
 
 } 
+
+
 
 export default CarrilBici;
 
