@@ -21,13 +21,13 @@ function TabNav() {
             if (route.name === 'CarrilBici') {
                 return  <Image
                     source={iconobici}
-                    style={{width:40, height:40}}
+                    style={{width:35, height:35}}
                     />
             
             } else if (route.name === 'Mapa') {
                 return <Image
                     source={iconomapa}
-                    style={{width:35, height:35}}
+                    style={{width:30, height:30}}
                     />
                    
             }
