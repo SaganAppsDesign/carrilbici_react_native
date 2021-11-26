@@ -2,6 +2,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import * as React from 'react';
 import {Mapa} from './mapas/mapa';  
 import TabNav from './tabnavigator'
+import Info from './info'
 
 
 
@@ -36,9 +37,9 @@ function DrawerNav() {
                 component={TabNav} />
   
               <Drawer.Screen
-                name="Mapa"
+                name="Info"
                 options={{ headerShown: false  }}
-                component={Mapa} />
+                component={Info} />
 
           </Drawer.Navigator>
     )}

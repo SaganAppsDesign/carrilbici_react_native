@@ -236,10 +236,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'black'
+    backgroundColor: 'white'
   },
   container: {
-    height:hp('93%'),
+    height:hp('94%'),
     width: wp('100%'),
     backgroundColor: 'white'
   },
