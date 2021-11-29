@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "Habitant.app"
-               BlueprintName = "Habitant"
-               ReferencedContainer = "container:Habitant.xcodeproj">
+               BuildableName = "CarrilBiciCadiz.app"
+               BlueprintName = "CarrilBiciCadiz"
+               ReferencedContainer = "container:CarrilBiciCadiz.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "HabitantTests.xctest"
-               BlueprintName = "HabitantTests"
-               ReferencedContainer = "container:Habitant.xcodeproj">
+               BuildableName = "CarrilBiciCadizTests.xctest"
+               BlueprintName = "CarrilBiciCadizTests"
+               ReferencedContainer = "container:CarrilBiciCadiz.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Habitant.app"
-            BlueprintName = "Habitant"
-            ReferencedContainer = "container:Habitant.xcodeproj">
+            BuildableName = "CarrilBiciCadiz.app"
+            BlueprintName = "CarrilBiciCadiz"
+            ReferencedContainer = "container:CarrilBiciCadiz.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Habitant.app"
-            BlueprintName = "Habitant"
-            ReferencedContainer = "container:Habitant.xcodeproj">
+            BuildableName = "CarrilBiciCadiz.app"
+            BlueprintName = "CarrilBiciCadiz"
+            ReferencedContainer = "container:CarrilBiciCadiz.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

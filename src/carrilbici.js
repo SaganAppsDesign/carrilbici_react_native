@@ -5,12 +5,14 @@ import Logo from './logo';
 import foto1 from '../assets/carrilbici2.jpg'; 
 import foto2 from '../assets/puentepepa.jpg'; 
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import firestore from '@react-native-firebase/firestore';
 
 
 
-const CarrilBici = (propiedades) => {
+const CarrilBici = (propiedades, route, navigation) => {
 
-    //console.log(propiedades)
+     const { name } = propiedades.route.params;
+
 
     const [activo, setActivo] = useState(false)  
 
@@ -67,6 +69,10 @@ const CarrilBici = (propiedades) => {
                             size={hp('3%')}
                             type="MaterialIcons"
                             onPress={() => alert('Carril Bici Cádiz')}/>
+                    </View>
+                    <View>
+
+                        <Text style={ {fontSize:hp('3%'),  color: 'black', textAlign:'center',  fontFamily:'Sarpanch-ExtraBold'}}>Hola {JSON.stringify(name)}</Text>
                     </View>
                     <View style={{justifyContent:'center',alignItems: 'center', flexDirection:'row', flex:1, width:wp('100%'), height:hp('50%'), marginTop:hp('3%')}}>
                         <Image 

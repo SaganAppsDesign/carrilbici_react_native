@@ -3,7 +3,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '11.0'
 
-target 'Habitant' do
+target 'CarrilBiciCadiz' do
   config = use_native_modules!
 
   use_react_native!(
@@ -20,7 +20,7 @@ target 'Habitant' do
 
   pod 'RNFirebase', :path => '../node_modules/react-native-firebase'
 
-  target 'HabitantTests' do
+  target 'CarrilBiciCadizTests' do
     inherit! :complete
     # Pods for testing
   end

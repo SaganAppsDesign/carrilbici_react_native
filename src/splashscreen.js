@@ -14,7 +14,7 @@ export class SplashScreen extends React.Component {
     
       setTimeout(()=>{
     
-        this.props.navigation.replace('DrawerNav')
+        this.props.navigation.navigate('Usuario')
   
       }, 2000)
   
