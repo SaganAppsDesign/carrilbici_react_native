@@ -18,6 +18,8 @@ target 'Habitant' do
 
   pod 'react-native-safe-area-context', :path => '../node_modules/react-native-safe-area-context'
 
+  pod 'RNFirebase', :path => '../node_modules/react-native-firebase'
+
   target 'HabitantTests' do
     inherit! :complete
     # Pods for testing

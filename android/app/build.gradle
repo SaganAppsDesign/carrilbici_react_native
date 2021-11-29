@@ -136,7 +136,7 @@ android {
                }
 
     defaultConfig {
-        applicationId "com.habitant"
+        applicationId "com.carrilbicicadiz"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

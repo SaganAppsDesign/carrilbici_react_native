@@ -1,4 +1,4 @@
-package com.habitant;
+package es.saganapps.carrilbicicadiz;
 
 import com.facebook.react.ReactActivity;
 
