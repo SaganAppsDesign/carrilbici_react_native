@@ -40,7 +40,7 @@ export class Mapa extends React.PureComponent {
   }
 
   state = {
-    estilomapa: MapboxGL.StyleURL.Street,
+    estilomapa: MapboxGL.StyleURL.SatelliteStreet,
     
    }
 
@@ -67,14 +67,7 @@ export class Mapa extends React.PureComponent {
     
 
     return (
-
-        
-
-      <View style={styles.page}>
-
-        
-
-         
+       
          <View style={styles.container}>
 
          <Header
@@ -203,7 +196,7 @@ export class Mapa extends React.PureComponent {
         
         </View>
 
-      </View>
+   
     )
    
   }
@@ -239,9 +232,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'white'
   },
   container: {
-    height:hp('94%'),
+    flex: 1,
+    height:hp('100%'),
     width: wp('100%'),
-    backgroundColor: 'white'
+   
   },
   map: {
     flex: 1

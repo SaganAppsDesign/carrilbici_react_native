@@ -25,7 +25,7 @@ const CarrilBici = (propiedades) => {
   return (
 
                                  
-          <View style={{alignItem:'center', justifyContent:'center', width:wp('100%'), height:hp('100%')}}>  
+          <View style={{alignItem:'center', justifyContent:'center', width:wp('100%'), height:hp('100%'), flex:1}}>  
          
                                  
             <ScrollView style={{width:wp('100%')}}> 
