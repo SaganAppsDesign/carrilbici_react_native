@@ -9,9 +9,13 @@ import firestore from '@react-native-firebase/firestore';
 
 
 
-const CarrilBici = (propiedades, route, navigation) => {
+const CarrilBici = ({route}) => {
 
-     const { name } = propiedades.route.params;
+    
+     //const [id, setID] = useState('')
+     
+     console.log("NOMBRE: ",route.params.name)
+     console.log("ID: ",route.params.id)
 
 
     const [activo, setActivo] = useState(false)  
@@ -30,7 +34,7 @@ const CarrilBici = (propiedades, route, navigation) => {
           <View style={{alignItem:'center', justifyContent:'center', width:wp('100%'), height:hp('100%'), flex:1}}>  
          
                                  
-            <ScrollView style={{width:wp('100%')}}> 
+            <ScrollView style={{width:wp('100%'), flex:1}}> 
                 <View style={{alignItems: 'center', flexDirection:'column',flex:1, width:wp('100%'), height:hp('22%')}}>
                     <ImageBackground 
                         
@@ -71,8 +75,8 @@ const CarrilBici = (propiedades, route, navigation) => {
                             onPress={() => alert('Carril Bici Cádiz')}/>
                     </View>
                     <View>
-
-                        <Text style={ {fontSize:hp('3%'),  color: 'black', textAlign:'center',  fontFamily:'Sarpanch-ExtraBold'}}>Hola {JSON.stringify(name)}</Text>
+                        <Text style={ {fontSize:hp('3%'),  color: 'black', textAlign:'center',  fontFamily:'Sarpanch'}}>Hola, {route.params.name} </Text>
+                        <Text style={ {fontSize:hp('2%'),  color: 'black', textAlign:'center',  fontFamily:'Sarpanch'}}>id: {route.params.id} </Text>
                     </View>
                     <View style={{justifyContent:'center',alignItems: 'center', flexDirection:'row', flex:1, width:wp('100%'), height:hp('50%'), marginTop:hp('3%')}}>
                         <Image 
@@ -83,13 +87,17 @@ const CarrilBici = (propiedades, route, navigation) => {
                                         
                             >    
                         </Image> 
+             
                     </View>                   
              
               
                 
-
+          
                 </ScrollView>
+               
            </View>
+           
+          
  
    
 

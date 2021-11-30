@@ -7,30 +7,56 @@ import {  TextInput } from 'react-native-paper';
 import { Button } from 'react-native-elements';
 
 
-const Usuario = (propiedades) => {
+const bbddd = 'USUARIOS'
+
+const Usuario = (props, navigation) => {
 
     const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-
+    const [id, setID] = useState('')
+    
     const AddUser = () => {
-     
+           
         firestore()
-        .collection('usuarios')
+        .collection(bbddd)
         .add({
            name: name,
           
       }) ;
-      
-  }
 
-     //lee datos
-    //firestore().collection('usuarios').doc('STIkbkZNcyC5A14eY68U').onSnapshot(documentSnapshot => {
-      //     setName(documentSnapshot.data().name)
-        //   setEmail(documentSnapshot.data().email)
+      firestore()
+      .collection(bbddd)
+      .where('name', '==', name)
+      .get()
+      .then(docs => {
+        docs.forEach(doc => {
+          const data = doc.data()
+
+          // adding new property id with id from Firestore
+          data.id = doc.id
+         props.navigation.navigate('TabNav', {
+
+          screen:'CarrilBici',
+          params: {id:data.id, name:name}
+          
+          
+        })
        
-      //});
+      })
+      .catch(err => console.log(err))
 
           
+
+      })
+      
+    }
+
+     //lee datos
+    firestore().collection(bbddd).doc('cgwKseulMANBMY5u41Aj').onSnapshot(documentSnapshot => {
+           console.log(documentSnapshot.data())
+          
+     });
+
+            
       //Borra usuario
 
       //firestore()
@@ -50,9 +76,9 @@ const Usuario = (propiedades) => {
                 </Text>
         
                 <TextInput
-                    style={styles.nameInput}
+                   
                     label="Nombre"
-                    onChangeText={setName}
+                    onChangeText={name => setName(name)}
                     value={name}
                     returnKeyType={ 'done' }
                     theme={{ colors: { primary: 'blue',underlineColor:'transparent'}}}
@@ -60,13 +86,13 @@ const Usuario = (propiedades) => {
                  <View>
                 <Button     
                     style={styles.button}
-                    onPress={AddUser,() => propiedades.navigation.navigate('CarrilBici', { name: name })}
+                    onPress={() => {AddUser()}}
                     title="Añade tu nombre"
                     color="#f194ff"
                            >
                 </Button>
-               
-               
+                    
+                
                 </View>
             </View>
             )
