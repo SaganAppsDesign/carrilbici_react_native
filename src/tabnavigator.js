@@ -30,7 +30,7 @@ function TabNav() {
             } else if (route.name === 'Info') {
                 return <Image
                     source={iconoinfo}
-                    style={{width:30, height:30}}
+                    style={{width:20, height:20}}
                     />
                    
             } else if (route.name === 'Mapa') {

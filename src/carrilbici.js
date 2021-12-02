@@ -78,12 +78,12 @@ const CarrilBici = ({route}) => {
                         <Text style={ {fontSize:hp('3%'),  color: 'black', textAlign:'center',  fontFamily:'Sarpanch'}}>Hola, {route.params.name} </Text>
                         <Text style={ {fontSize:hp('2%'),  color: 'black', textAlign:'center',  fontFamily:'Sarpanch'}}>id: {route.params.id} </Text>
                     </View>
-                    <View style={{justifyContent:'center',alignItems: 'center', flexDirection:'row', flex:1, width:wp('100%'), height:hp('50%'), marginTop:hp('3%')}}>
+                    <View style={{justifyContent:'center',alignItems: 'center', flexDirection:'row', flex:1, width:wp('100%'), height:hp('40%'), marginTop:hp('6%')}}>
                         <Image 
                             
                             source={foto1}
                             resizeMode='contain'
-                            style={{aspectRatio:1.2, width:wp('100%'), height:hp('50%'), marginBottom:hp('0%'), marginTop:hp('0%')}}
+                            style={{aspectRatio:1.2, width:wp('100%'), height:hp('40%'), marginBottom:hp('0%'), marginTop:hp('0%')}}
                                         
                             >    
                         </Image> 

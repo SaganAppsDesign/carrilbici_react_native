@@ -6,8 +6,7 @@ import Logo from './logo';
 
 const Info = (propiedades) => {
 
-    console.log("propiedades Info", propiedades)
-
+   
     const [activo, setActivo] = useState(false)  
 
     useEffect(() =>{
@@ -19,9 +18,9 @@ const Info = (propiedades) => {
       }, [])
 
   return (
-    <View style={{alignItem:'center',  width:wp('100%'), height:hp('100%'), flex:1}}>  
+    <View style={{alignItem:'center', width:wp('100%'), height:hp('100%'), flex:1}}>  
         
-        <View style={{flex:0.1, marginTop:hp('3%')}}>  
+        <View style={{flex:0.1, marginTop:hp('6%')}}>  
           <Logo/>
         </View>
          

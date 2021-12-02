@@ -1,2 +1,3 @@
 gradlew clean build
 gradlew --refresh-dependencies
+gradlew assembleRelease
