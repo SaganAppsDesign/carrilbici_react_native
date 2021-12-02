@@ -4,6 +4,7 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 import msg1 from '../assets/mensaje1.png'; 
 import Logo from './logo'; 
 
+//Info
 const Info = (propiedades) => {
 
     console.log("propiedades Info", propiedades)
